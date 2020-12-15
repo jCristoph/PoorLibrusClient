@@ -57,6 +57,7 @@ namespace ClientTCP
 
             }
         }
+        #region dataTransmission
         public string read()
         {
             byte[] buffer = new byte[1024];
@@ -90,6 +91,13 @@ namespace ClientTCP
         public string[] checkMessage(string s)
         {
             return s.Split(' ');
+        }
+        #endregion
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Client.Close();
         }
     }
 }

@@ -11,22 +11,20 @@ using System.Windows.Forms;
 
 namespace ClientTCP
 {
-    public partial class AddUser : Form
+    public partial class ChangeSubject : Form
     {
         TcpClient Client;
         NetworkStream stream;
-        public AddUser(TcpClient Client)
+        public ChangeSubject(TcpClient Client)
         {
             this.Client = Client;
             stream = Client.GetStream();
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ChangeSubject_Load(object sender, EventArgs e)
         {
-            write("ADDUSER"+textBox1.Text + " " + textBox2.Text + " " + textBox3.Text + " " + textBox4.Text + " " + textBox5.Text);
-            MessageBox.Show("New user has been created");
-            this.Hide();
+
         }
         private void write(string toWrite)
         {
@@ -39,6 +37,12 @@ namespace ClientTCP
             {
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            write("CHNGSUBJECT" + textBox1.Text);
+            this.Hide();
         }
     }
 }

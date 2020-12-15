@@ -31,9 +31,10 @@ namespace ClientTCP
         {
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_chngPsswd = new System.Windows.Forms.Button();
-            this.txt1 = new System.Windows.Forms.RichTextBox();
             this.btn_refresh = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
+            this.table = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_logout
@@ -56,14 +57,6 @@ namespace ClientTCP
             this.btn_chngPsswd.UseVisualStyleBackColor = true;
             this.btn_chngPsswd.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txt1
-            // 
-            this.txt1.Location = new System.Drawing.Point(137, 58);
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(496, 254);
-            this.txt1.TabIndex = 7;
-            this.txt1.Text = "";
-            // 
             // btn_refresh
             // 
             this.btn_refresh.Location = new System.Drawing.Point(137, 318);
@@ -84,19 +77,29 @@ namespace ClientTCP
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // table
+            // 
+            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.table.Location = new System.Drawing.Point(137, 55);
+            this.table.Name = "table";
+            this.table.Size = new System.Drawing.Size(527, 257);
+            this.table.TabIndex = 12;
+            // 
             // StudentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.table);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_chngPsswd);
-            this.Controls.Add(this.txt1);
             this.Name = "StudentScreen";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.StudentScreen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,8 +107,8 @@ namespace ClientTCP
         #endregion
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Button btn_chngPsswd;
-        private System.Windows.Forms.RichTextBox txt1;
         private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.DataGridView table;
     }
 }

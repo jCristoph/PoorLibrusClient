@@ -74,6 +74,7 @@ namespace ClientTCP
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
+            Client.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,7 +86,6 @@ namespace ClientTCP
 
         private void button3_Click(object sender, EventArgs e)
         {
-            write("EDIT");
             EditGrades edit = new EditGrades(Client);
             edit.ShowDialog();
         }
@@ -103,14 +103,12 @@ namespace ClientTCP
 
         private void button4_Click(object sender, EventArgs e)
         {
-            write("ADDUSER");
             AddUser addu = new AddUser(Client);
             addu.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            write("REMOVE");
             RemoveUser remu = new RemoveUser(Client);
             remu.ShowDialog();
         }

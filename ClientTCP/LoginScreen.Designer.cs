@@ -34,6 +34,7 @@ namespace ClientTCP
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -81,17 +82,28 @@ namespace ClientTCP
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form2
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(533, 344);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(125, 45);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Exit";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 401);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form2";
+            this.Name = "LoginScreen";
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,5 +117,6 @@ namespace ClientTCP
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

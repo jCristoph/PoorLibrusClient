@@ -19,6 +19,7 @@ namespace ClientTCP
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Client.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,14 +87,14 @@ namespace ClientTCP
 
         private void button3_Click(object sender, EventArgs e)
         {
-            write("ADDGRADE");
             addGrade a = new addGrade(Client);
             a.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            write("CHNGSUBJECT");
+            ChangeSubject c = new ChangeSubject(Client);
+            c.ShowDialog();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace ClientTCP
     {
         TcpClient Client;
         NetworkStream stream;
-        public StudentScreen(TcpClient Client)
+        public StudentScreen(TcpClient Client1)
         {
             this.Client = Client;
             stream = Client.GetStream();
@@ -37,7 +37,7 @@ namespace ClientTCP
         {
             write("CHECK");
             string[] command = checkMessage(read());
-            txt1.Clear();
+            
             for (int i = 0; i < command.Length; i++)
             {
                 txt1.Text += command[i];
@@ -46,7 +46,6 @@ namespace ClientTCP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            write("NEW_PASS");
             changePassword c = new changePassword(Client);
             c.ShowDialog();
             
@@ -60,7 +59,7 @@ namespace ClientTCP
             login.ShowDialog();
         }
 
-        #region dataTransmission
+       #region dataTransmission
         private string read()
         {
             byte[] buffer = new byte[1024];
@@ -100,6 +99,7 @@ namespace ClientTCP
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Client.Close();
         }
     }
 }

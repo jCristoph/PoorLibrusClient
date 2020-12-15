@@ -24,7 +24,8 @@ namespace ClientTCP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            write(textBox1.Text + " " + textBox2.Text + " " + textBox3.Text + " " + textBox4.Text);
+            write("EDIT "+textBox1.Text + " " + textBox2.Text + " " + textBox3.Text + " " + textBox4.Text);
+            this.Hide();
         }
         private void write(string toWrite)
         {

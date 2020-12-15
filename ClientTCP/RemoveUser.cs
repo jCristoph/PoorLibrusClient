@@ -24,7 +24,8 @@ namespace ClientTCP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            write(textBox4.Text);
+            write("REMOVE" + textBox4.Text);
+            this.Hide();
         }
         private void write(string toWrite)
         {
