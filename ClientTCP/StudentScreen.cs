@@ -27,7 +27,7 @@ namespace ClientTCP
             string[] command = checkMessage(read());
             for(int i=0; i<command.Length; i++)
             {
-                txt1.Text += command[i];
+
             }
         }
 
