@@ -36,7 +36,7 @@ namespace ClientTCP
             // 
             // btncon
             // 
-            this.btncon.Location = new System.Drawing.Point(316, 261);
+            this.btncon.Location = new System.Drawing.Point(308, 226);
             this.btncon.Name = "btncon";
             this.btncon.Size = new System.Drawing.Size(178, 90);
             this.btncon.TabIndex = 0;
@@ -65,7 +65,7 @@ namespace ClientTCP
             this.label3.TabIndex = 3;
             this.label3.Text = "Please connect to the server";
             // 
-            // Form1
+            // ConnectScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,8 +73,8 @@ namespace ClientTCP
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btncon);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ConnectScreen";
+            this.Text = "Libre Client";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

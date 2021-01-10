@@ -29,8 +29,21 @@ namespace ClientTCP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _data.write("NEW_PASS " + textBox1.Text);
+            write("NEW_PASS " + textBox1.Text);
             this.Hide();
+        }
+        private void write(string toWrite)
+        {
+            byte[] buffer = ASCIIEncoding.UTF8.GetBytes(toWrite);
+            try
+            {
+                stream.Write(buffer, 0, buffer.Length);
+            }
+            catch (Exception e)
+            {
+
+            }
+
         }
     }
 }

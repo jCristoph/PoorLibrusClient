@@ -75,6 +75,8 @@ namespace ClientTCP
         {
             this.Close();
             Client.Close();
+            System.Windows.Forms.Application.ExitThread();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)

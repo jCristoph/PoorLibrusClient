@@ -15,7 +15,7 @@ namespace ClientTCP
     {
         TcpClient Client;
         NetworkStream stream;
-        public StudentScreen(TcpClient Client1)
+        public StudentScreen(TcpClient Client)
         {
             this.Client = Client;
             stream = Client.GetStream();
@@ -25,10 +25,10 @@ namespace ClientTCP
         private void StudentScreen_Load(object sender, EventArgs e)
         {
             string[] command = checkMessage(read());
-            for(int i=0; i<command.Length; i++)
-            {
-                txt1.Text += command[i];
-            }
+
+            for(int i=0; i<command.Length;i++) table.DataSource = command[i];
+
+
         }
 
         
@@ -37,11 +37,8 @@ namespace ClientTCP
         {
             write("CHECK");
             string[] command = checkMessage(read());
-            
-            for (int i = 0; i < command.Length; i++)
-            {
-                txt1.Text += command[i];
-            }
+            table.Columns.Add("ID", "1");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,6 +97,8 @@ namespace ClientTCP
         {
             this.Close();
             Client.Close();
+            System.Windows.Forms.Application.ExitThread();
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

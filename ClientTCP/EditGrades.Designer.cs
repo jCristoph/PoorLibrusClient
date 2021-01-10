@@ -137,7 +137,7 @@ namespace ClientTCP
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditGrades";
-            this.Text = "Form1";
+            this.Text = "Edit Grade";
             this.ResumeLayout(false);
             this.PerformLayout();
 

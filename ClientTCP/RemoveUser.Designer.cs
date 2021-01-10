@@ -69,7 +69,7 @@ namespace ClientTCP
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Name = "RemoveUser";
-            this.Text = "RemoveUser";
+            this.Text = "Remove User";
             this.ResumeLayout(false);
             this.PerformLayout();
 

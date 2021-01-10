@@ -97,7 +97,7 @@ namespace ClientTCP
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_chngPsswd);
             this.Name = "StudentScreen";
-            this.Text = "Form1";
+            this.Text = "Student Client";
             this.Load += new System.EventHandler(this.StudentScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
