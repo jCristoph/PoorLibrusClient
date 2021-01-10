@@ -85,6 +85,7 @@ namespace ClientTCP
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(527, 257);
             this.table.TabIndex = 12;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // StudentScreen
             // 
@@ -97,7 +98,7 @@ namespace ClientTCP
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_chngPsswd);
             this.Name = "StudentScreen";
-            this.Text = "Form1";
+            this.Text = "Student Client";
             this.Load += new System.EventHandler(this.StudentScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);

@@ -119,7 +119,7 @@ namespace ClientTCP
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "TeacherScreen";
-            this.Text = "Form2";
+            this.Text = "Teacher Client";
             this.ResumeLayout(false);
 
         }

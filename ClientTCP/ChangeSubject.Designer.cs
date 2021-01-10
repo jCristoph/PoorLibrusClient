@@ -69,7 +69,7 @@ namespace ClientTCP
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "ChangeSubject";
-            this.Text = "Form1";
+            this.Text = "Change Subject";
             this.Load += new System.EventHandler(this.ChangeSubject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

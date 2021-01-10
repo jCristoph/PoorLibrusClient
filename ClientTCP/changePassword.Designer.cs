@@ -69,7 +69,7 @@ namespace ClientTCP
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "changePassword";
-            this.Text = "changePassword";
+            this.Text = "Change Password";
             this.Load += new System.EventHandler(this.changePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

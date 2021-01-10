@@ -104,7 +104,7 @@ namespace ClientTCP
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "LoginScreen";
-            this.Text = "Form2";
+            this.Text = "Libre Client";
             this.ResumeLayout(false);
             this.PerformLayout();
 

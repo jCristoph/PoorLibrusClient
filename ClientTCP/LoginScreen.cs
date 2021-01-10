@@ -98,6 +98,8 @@ namespace ClientTCP
         {
             this.Close();
             Client.Close();
+            System.Windows.Forms.Application.ExitThread();
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

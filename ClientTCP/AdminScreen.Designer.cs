@@ -131,7 +131,7 @@ namespace ClientTCP
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "AdminScreen";
-            this.Text = "Form1";
+            this.Text = "Admin Client";
             this.ResumeLayout(false);
 
         }
