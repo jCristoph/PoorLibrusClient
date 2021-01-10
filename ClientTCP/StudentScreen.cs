@@ -25,10 +25,10 @@ namespace ClientTCP
         private void StudentScreen_Load(object sender, EventArgs e)
         {
             string[] command = checkMessage(read());
+            for(int i=0; i<command.Length; i++)
+            {
 
-            for(int i=0; i<command.Length;i++) table.DataSource = command[i];
-
-
+            }
         }
 
         
@@ -97,8 +97,6 @@ namespace ClientTCP
         {
             this.Close();
             Client.Close();
-            System.Windows.Forms.Application.ExitThread();
-            System.Windows.Forms.Application.Exit();
         }
     }
 }

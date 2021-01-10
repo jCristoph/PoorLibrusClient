@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace ClientTCP
 {
     partial class StudentScreen
@@ -85,6 +88,7 @@ namespace ClientTCP
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(527, 257);
             this.table.TabIndex = 12;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // StudentScreen
             // 
@@ -102,6 +106,11 @@ namespace ClientTCP
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
