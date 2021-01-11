@@ -27,12 +27,13 @@ namespace ClientTCP
 
         }
         #region dataTransmission
-        private string read()
+        
+        private string read(int bufferSize)
         {
-            byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[bufferSize];
             try
             {
-                int message_size = stream.Read(buffer, 0, 1024);
+                int message_size = stream.Read(buffer, 0, bufferSize);
             }
             catch (Exception e)
             {
@@ -94,9 +95,12 @@ namespace ClientTCP
 
         private void btnGrade_Click(object sender, EventArgs e)
         {
+            write("USERS");
+            richTextBox1.Clear();
+            int bufferSize = Convert.ToInt32(read(1024)) * 256;
             write("USERLIST");
             richTextBox1.Clear();
-            string[] command = checkMessage(read());
+            string[] command = checkMessage(read(bufferSize));
             for (int i = 0; i < command.Length; i++)
             {
                 richTextBox1.Text += command[i] += " ";
