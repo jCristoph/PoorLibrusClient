@@ -24,7 +24,7 @@ namespace ClientTCP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            write("ADDUSER"+textBox1.Text + " " + textBox2.Text + " " + textBox3.Text + " " + textBox4.Text + " " + textBox5.Text);
+            write("ADDUSER "+textBox1.Text + " " + textBox2.Text + " " + textBox3.Text + " " + textBox4.Text + " " + textBox5.Text);
             MessageBox.Show("New user has been created");
             this.Hide();
         }

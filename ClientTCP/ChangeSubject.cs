@@ -41,7 +41,7 @@ namespace ClientTCP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            write("CHNGSUBJECT" + textBox1.Text);
+            write("CHNGSUBJECT " + textBox1.Text);
             this.Hide();
         }
     }
