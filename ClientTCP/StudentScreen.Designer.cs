@@ -88,7 +88,7 @@ namespace ClientTCP
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(527, 257);
             this.table.TabIndex = 12;
-            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick_1);
             // 
             // StudentScreen
             // 
@@ -108,16 +108,12 @@ namespace ClientTCP
 
         }
 
-        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Button btn_chngPsswd;
         private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.DataGridView table;
+        private readonly DataGridViewCellEventHandler table_CellContentClick;
     }
 }

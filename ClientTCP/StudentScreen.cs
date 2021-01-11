@@ -24,10 +24,30 @@ namespace ClientTCP
 
         private void StudentScreen_Load(object sender, EventArgs e)
         {
+            table.ReadOnly = true;
+            table.ColumnCount = 9;
+            table.Columns[0].Name = "przedmiot";
+            table.Columns[1].Name = "ocena 1";
+            table.Columns[2].Name = "ocena 2";
+            table.Columns[3].Name = "ocena 3";
+            table.Columns[4].Name = "ocena 4";
+            table.Columns[5].Name = "ocena 5";
+            table.Columns[6].Name = "ocena 6";
+            table.Columns[7].Name = "ocena 7";
             string[] command = checkMessage(read());
-            for(int i=0; i<command.Length; i++)
-            {
+            var index = this.table.Rows.Add();
+            int j = 0;
 
+            for (int i = 0; i < command.Length; i++)
+            {
+                if (command[i].Length > 3)
+                {
+                    index = this.table.Rows.Add();
+                    j = 0;
+                }
+
+                this.table.Rows[index].Cells[j].Value = command[i];
+                j++;
             }
         }
 
@@ -37,7 +57,6 @@ namespace ClientTCP
         {
             write("CHECK");
             string[] command = checkMessage(read());
-            table.Columns.Add("ID", "1");
 
         }
 
@@ -95,8 +114,15 @@ namespace ClientTCP
 
         private void exit_Click(object sender, EventArgs e)
         {
+            write("LOGOUT");
+            System.Windows.Forms.Application.ExitThread();
+            System.Windows.Forms.Application.Exit();
             this.Close();
             Client.Close();
+        }
+
+        private void table_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

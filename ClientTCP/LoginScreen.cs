@@ -29,11 +29,12 @@ namespace ClientTCP
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             write("Login " + textBox1.Text + " " + textBox2.Text);
 
 
             string[] command = checkMessage(read());
+            try
+            {
                 switch (command[0])
                 {
                     case "s":
@@ -55,6 +56,11 @@ namespace ClientTCP
                         MessageBox.Show("Wrong login or password. Try again");
                         break;
 
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         #region dataTransmission
