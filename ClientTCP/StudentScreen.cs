@@ -24,30 +24,31 @@ namespace ClientTCP
 
         private void StudentScreen_Load(object sender, EventArgs e)
         {
-            table.ReadOnly = true;
-            table.ColumnCount = 9;
-            table.Columns[0].Name = "przedmiot";
-            table.Columns[1].Name = "ocena 1";
-            table.Columns[2].Name = "ocena 2";
-            table.Columns[3].Name = "ocena 3";
-            table.Columns[4].Name = "ocena 4";
-            table.Columns[5].Name = "ocena 5";
-            table.Columns[6].Name = "ocena 6";
-            table.Columns[7].Name = "ocena 7";
             string[] command = checkMessage(read());
+            table.ReadOnly = true;
+            table.ColumnCount = command.Length;
+            table.Columns[0].Name = "przedmiot";
+            for (int i = 1; i < command.Length; i++) 
+            {
+                table.Columns[i].Name = "ocena";
+            }
+
             var index = this.table.Rows.Add();
             int j = 0;
 
             for (int i = 0; i < command.Length; i++)
             {
-                if (command[i].Length > 3)
+                if (command[i]=="~")
                 {
                     index = this.table.Rows.Add();
                     j = 0;
                 }
-
-                this.table.Rows[index].Cells[j].Value = command[i];
-                j++;
+                else
+                {
+                    this.table.Rows[index].Cells[j].Value = command[i];
+                    j++;
+                }
+                
             }
         }
 

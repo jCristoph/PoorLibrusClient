@@ -81,11 +81,25 @@ namespace ClientTCP
         private void btnGrade_Click(object sender, EventArgs e)
         {
             write("STUDENTLIST");
-            richTextBox1.Clear();
+            table.Columns[0].Name = "przedmiot";
+            for (int i = 1; i < 20; i++)
+            {
+                table.Columns[i].Name = "ocena";
+            }
             string[] command = checkMessage(read());
+            var index = this.table.Rows.Add();
+            int j = 0;
+
             for (int i = 0; i < command.Length; i++)
             {
-                richTextBox1.Text += command[i] += " ";
+                if (command[i].Length > 3)
+                {
+                    index = this.table.Rows.Add();
+                    j = 0;
+                }
+
+                this.table.Rows[index].Cells[j].Value = command[i];
+                j++;
             }
         }
 
@@ -99,6 +113,11 @@ namespace ClientTCP
         {
             ChangeSubject c = new ChangeSubject(Client);
             c.ShowDialog();
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
