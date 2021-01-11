@@ -74,10 +74,11 @@ namespace ClientTCP
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Client.Close();
+            write("LOGOUT");
             System.Windows.Forms.Application.ExitThread();
             System.Windows.Forms.Application.Exit();
+            this.Close();
+            Client.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

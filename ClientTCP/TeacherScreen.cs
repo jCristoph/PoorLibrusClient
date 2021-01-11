@@ -18,10 +18,12 @@ namespace ClientTCP
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Client.Close();
+            write("LOGOUT");
             System.Windows.Forms.Application.ExitThread();
             System.Windows.Forms.Application.Exit();
+            this.Close();
+            Client.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
