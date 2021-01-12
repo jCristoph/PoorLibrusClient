@@ -86,6 +86,7 @@ namespace ClientTCP
             this.table.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.table.Location = new System.Drawing.Point(137, 55);
             this.table.Name = "table";
+            this.table.ReadOnly = true;
             this.table.Size = new System.Drawing.Size(527, 257);
             this.table.TabIndex = 12;
             this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick_1);

@@ -32,6 +32,7 @@ namespace ClientTCP
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -52,19 +53,30 @@ namespace ClientTCP
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(174, 94);
+            this.button1.Location = new System.Drawing.Point(186, 92);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(63, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Approve";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cancel
+            // 
+            this.cancel.Location = new System.Drawing.Point(121, 92);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(59, 23);
+            this.cancel.TabIndex = 3;
+            this.cancel.Text = "Cancel";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // changePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(303, 143);
+            this.Controls.Add(this.cancel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -81,5 +93,6 @@ namespace ClientTCP
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cancel;
     }
 }

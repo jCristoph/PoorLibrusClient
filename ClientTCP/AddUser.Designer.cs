@@ -29,32 +29,34 @@ namespace ClientTCP
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt5 = new System.Windows.Forms.TextBox();
+            this.txt4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt3 = new System.Windows.Forms.TextBox();
+            this.txt2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt6 = new System.Windows.Forms.TextBox();
+            this.txt1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox4
+            // txt5
             // 
-            this.textBox4.Location = new System.Drawing.Point(187, 143);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(124, 20);
-            this.textBox4.TabIndex = 22;
+            this.txt5.Location = new System.Drawing.Point(187, 143);
+            this.txt5.Name = "txt5";
+            this.txt5.Size = new System.Drawing.Size(124, 20);
+            this.txt5.TabIndex = 22;
             // 
-            // textBox3
+            // txt4
             // 
-            this.textBox3.Location = new System.Drawing.Point(187, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 20);
-            this.textBox3.TabIndex = 21;
+            this.txt4.Location = new System.Drawing.Point(187, 116);
+            this.txt4.Name = "txt4";
+            this.txt4.Size = new System.Drawing.Size(124, 20);
+            this.txt4.TabIndex = 21;
             // 
             // label4
             // 
@@ -68,7 +70,7 @@ namespace ClientTCP
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(101, 116);
+            this.label3.Location = new System.Drawing.Point(101, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 19;
@@ -76,7 +78,7 @@ namespace ClientTCP
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(375, 218);
+            this.button1.Location = new System.Drawing.Point(319, 199);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 34);
             this.button1.TabIndex = 18;
@@ -84,33 +86,33 @@ namespace ClientTCP
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // txt3
             // 
-            this.textBox2.Location = new System.Drawing.Point(187, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(124, 20);
-            this.textBox2.TabIndex = 17;
+            this.txt3.Location = new System.Drawing.Point(187, 84);
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(124, 20);
+            this.txt3.TabIndex = 17;
             // 
-            // textBox1
+            // txt2
             // 
-            this.textBox1.Location = new System.Drawing.Point(187, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 16;
+            this.txt2.Location = new System.Drawing.Point(187, 53);
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(124, 20);
+            this.txt2.TabIndex = 16;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 84);
+            this.label2.Location = new System.Drawing.Point(79, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Surname:";
+            this.label2.Text = "Second Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 56);
+            this.label1.Location = new System.Drawing.Point(119, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 14;
@@ -119,37 +121,55 @@ namespace ClientTCP
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(80, 173);
+            this.label5.Location = new System.Drawing.Point(83, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 23;
             this.label5.Text = "User type (t/s):";
             // 
-            // textBox5
+            // txt6
             // 
-            this.textBox5.Location = new System.Drawing.Point(187, 170);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(124, 20);
-            this.textBox5.TabIndex = 24;
+            this.txt6.Location = new System.Drawing.Point(187, 170);
+            this.txt6.Name = "txt6";
+            this.txt6.Size = new System.Drawing.Size(124, 20);
+            this.txt6.TabIndex = 24;
+            // 
+            // txt1
+            // 
+            this.txt1.Location = new System.Drawing.Point(187, 28);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(124, 20);
+            this.txt1.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(104, 119);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Subject:";
             // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 273);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(452, 243);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txt6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt5);
+            this.Controls.Add(this.txt4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt3);
+            this.Controls.Add(this.txt2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddUser";
-            this.Text = "Add User";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,16 +177,18 @@ namespace ClientTCP
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt5;
+        private System.Windows.Forms.TextBox txt4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt3;
+        private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt6;
+        private System.Windows.Forms.TextBox txt1;
+        private System.Windows.Forms.Label label6;
     }
 }
