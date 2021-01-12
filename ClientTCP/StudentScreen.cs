@@ -27,10 +27,10 @@ namespace ClientTCP
             string[] command = checkMessage(read());
             table.ReadOnly = true;
             table.ColumnCount = command.Length;
-            table.Columns[0].Name = "przedmiot";
+            table.Columns[0].Name = "Subject";
             for (int i = 1; i < command.Length; i++) 
             {
-                table.Columns[i].Name = "ocena";
+                table.Columns[i].Name = "Grade";
             }
 
             var index = this.table.Rows.Add();
@@ -56,9 +56,34 @@ namespace ClientTCP
 
         private void button3_Click(object sender, EventArgs e)
         {
+            table.Rows.Clear();
             write("CHECK");
             string[] command = checkMessage(read());
+            table.ReadOnly = true;
+            table.ColumnCount = command.Length;
+            table.Columns[0].Name = "Subject";
+            for (int i = 1; i < command.Length; i++)
+            {
+                table.Columns[i].Name = "Grade";
+            }
 
+            var index = this.table.Rows.Add();
+            int j = 0;
+
+            for (int i = 0; i < command.Length; i++)
+            {
+                if (command[i] == "~")
+                {
+                    index = this.table.Rows.Add();
+                    j = 0;
+                }
+                else
+                {
+                    this.table.Rows[index].Cells[j].Value = command[i];
+                    j++;
+                }
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

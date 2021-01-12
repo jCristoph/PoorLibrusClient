@@ -96,11 +96,12 @@ namespace ClientTCP
 
         private void btnGrade_Click(object sender, EventArgs e)
         {
+            table.Rows.Clear();
             write("USERS");
             int bufferSize = Convert.ToInt32(read(1024)) * 256;
             write("USERLIST");
             string[] command = checkMessage(read(bufferSize));
-            table.ColumnCount = 28;
+            table.ColumnCount = 27;
             table.Columns[0].Name = "Login";
             table.Columns[1].Name = "Password";
             table.Columns[2].Name = "Index";

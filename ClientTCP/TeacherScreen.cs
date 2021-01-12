@@ -80,26 +80,34 @@ namespace ClientTCP
 
         private void btnGrade_Click(object sender, EventArgs e)
         {
+            table.Rows.Clear();
             write("STUDENTLIST");
-            table.Columns[0].Name = "przedmiot";
-            for (int i = 1; i < 20; i++)
-            {
-                table.Columns[i].Name = "ocena";
-            }
             string[] command = checkMessage(read());
+            table.ColumnCount = 21;
+            table.Columns[0].Name = "ID";
+            table.Columns[1].Name = "Name";
+            table.Columns[2].Name = "Second Name";
+            table.Columns[3].Name = "Subject";
+            for (int i = 4; i < 20; i++)
+            {
+                table.Columns[i].Name = "Grade";
+            }
+
             var index = this.table.Rows.Add();
             int j = 0;
 
             for (int i = 0; i < command.Length; i++)
             {
-                if (command[i].Length > 3)
+                if (command[i] == "~")
                 {
                     index = this.table.Rows.Add();
                     j = 0;
                 }
-
-                this.table.Rows[index].Cells[j].Value = command[i];
-                j++;
+                else
+                {
+                    this.table.Rows[index].Cells[j].Value = command[i];
+                    j++;
+                }
             }
         }
 
