@@ -53,7 +53,7 @@ namespace ClientTCP
                         admin.ShowDialog();
                         break;
                     default:
-                        MessageBox.Show(command[0]);
+                        //MessageBox.Show(command[0]);
                         MessageBox.Show("Wrong login or password. Try again");
                         break;
 
