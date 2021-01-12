@@ -108,7 +108,7 @@ namespace ClientTCP
             table.Columns[4].Name = "Second Name";
             table.Columns[5].Name = "Subject";
             table.Columns[6].Name = "User Type";
-            for(int c = 7;c<28;c++)
+            for(int c = 7;c<27;c++)
             {
                 table.Columns[c].Name = "grade";
             }
