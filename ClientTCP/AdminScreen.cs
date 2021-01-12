@@ -97,15 +97,40 @@ namespace ClientTCP
         private void btnGrade_Click(object sender, EventArgs e)
         {
             write("USERS");
-            richTextBox1.Clear();
             int bufferSize = Convert.ToInt32(read(1024)) * 256;
             write("USERLIST");
-            richTextBox1.Clear();
             string[] command = checkMessage(read(bufferSize));
+            table.ColumnCount = 28;
+            table.Columns[0].Name = "Login";
+            table.Columns[1].Name = "Password";
+            table.Columns[2].Name = "Index";
+            table.Columns[3].Name = "Name";
+            table.Columns[4].Name = "Second Name";
+            table.Columns[5].Name = "Subject";
+            table.Columns[6].Name = "User Type";
+            for(int c = 7;c<28;c++)
+            {
+                table.Columns[c].Name = "grade";
+            }
+            
+            var index = this.table.Rows.Add();
+            int j = 0;
+
             for (int i = 0; i < command.Length; i++)
             {
-                richTextBox1.Text += command[i] += " ";
+                if (command[i] == "~")
+                {
+                    index = this.table.Rows.Add();
+                    j = 0;
+                }
+                else
+                {
+                    this.table.Rows[index].Cells[j].Value = command[i];
+                    j++;
+                }
+
             }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -118,6 +143,11 @@ namespace ClientTCP
         {
             RemoveUser remu = new RemoveUser(Client);
             remu.ShowDialog();
+        }
+
+        private void AdminScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

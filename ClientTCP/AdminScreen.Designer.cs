@@ -133,6 +133,7 @@ namespace ClientTCP
             this.Controls.Add(this.button1);
             this.Name = "AdminScreen";
             this.Text = "Admin Client";
+            this.Load += new System.EventHandler(this.AdminScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
 
