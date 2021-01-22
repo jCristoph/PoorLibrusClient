@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
 using System.Windows.Forms;
@@ -9,11 +10,19 @@ namespace ClientTCP
     {
         TcpClient Client;
         NetworkStream stream;
+        string[] subjects;
+
         public TeacherScreen(TcpClient Client)
         {
             this.Client = Client;
             stream = Client.GetStream();
             InitializeComponent();
+            write("SUBJECTS");
+            subjects = checkMessage(read());
+            Array.Resize(ref subjects, subjects.Length - 1);
+            comboBox1.Items.Clear();
+            comboBox1.DataSource = subjects;
+
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -117,15 +126,15 @@ namespace ClientTCP
             a.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ChangeSubject c = new ChangeSubject(Client);
-            c.ShowDialog();
-        }
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            write("CHNGSUBJECT " + comboBox1.SelectedItem);
         }
     }
 }
