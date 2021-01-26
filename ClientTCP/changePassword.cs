@@ -30,7 +30,7 @@ namespace ClientTCP
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.TextLength > 3 && textBox1.TextLength < 12) write("NEW_PASS " + textBox1.Text);
-            else MessageBox.Show("Please, check if your password is at least 4 characters long");
+            else MessageBox.Show("Please, check if lenght of your password is between 4 and 12 characters");
             this.Hide();
         }
         private void write(string toWrite)
