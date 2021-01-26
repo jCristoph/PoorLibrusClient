@@ -63,7 +63,7 @@ namespace ClientTCP
             // 
             // btn_refresh
             // 
-            this.btn_refresh.Location = new System.Drawing.Point(137, 318);
+            this.btn_refresh.Location = new System.Drawing.Point(692, 44);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(96, 41);
             this.btn_refresh.TabIndex = 10;
@@ -85,10 +85,10 @@ namespace ClientTCP
             // 
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.table.Location = new System.Drawing.Point(137, 55);
+            this.table.Location = new System.Drawing.Point(99, 44);
             this.table.Name = "table";
             this.table.ReadOnly = true;
-            this.table.Size = new System.Drawing.Size(527, 257);
+            this.table.Size = new System.Drawing.Size(565, 310);
             this.table.TabIndex = 12;
             this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick_1);
             // 

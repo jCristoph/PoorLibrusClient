@@ -44,7 +44,7 @@ namespace ClientTCP
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(382, 393);
+            this.button1.Location = new System.Drawing.Point(407, 393);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 45);
             this.button1.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace ClientTCP
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(520, 393);
+            this.button2.Location = new System.Drawing.Point(538, 393);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 45);
             this.button2.TabIndex = 2;
@@ -66,9 +66,9 @@ namespace ClientTCP
             // btnGrade
             // 
             this.btnGrade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnGrade.Location = new System.Drawing.Point(149, 303);
+            this.btnGrade.Location = new System.Drawing.Point(669, 153);
             this.btnGrade.Name = "btnGrade";
-            this.btnGrade.Size = new System.Drawing.Size(116, 38);
+            this.btnGrade.Size = new System.Drawing.Size(107, 38);
             this.btnGrade.TabIndex = 3;
             this.btnGrade.Text = "List Users";
             this.btnGrade.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@ namespace ClientTCP
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(149, 343);
+            this.button3.Location = new System.Drawing.Point(669, 193);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 38);
+            this.button3.Size = new System.Drawing.Size(107, 38);
             this.button3.TabIndex = 4;
             this.button3.Text = "Edit Grade";
             this.button3.UseVisualStyleBackColor = true;
@@ -124,10 +124,10 @@ namespace ClientTCP
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Location = new System.Drawing.Point(149, 60);
+            this.table.Location = new System.Drawing.Point(12, 12);
             this.table.Name = "table";
             this.table.ReadOnly = true;
-            this.table.Size = new System.Drawing.Size(496, 237);
+            this.table.Size = new System.Drawing.Size(635, 352);
             this.table.TabIndex = 8;
             // 
             // AdminScreen

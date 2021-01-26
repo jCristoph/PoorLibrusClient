@@ -42,9 +42,9 @@ namespace ClientTCP
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(137, 335);
+            this.button3.Location = new System.Drawing.Point(665, 203);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 38);
+            this.button3.Size = new System.Drawing.Size(110, 38);
             this.button3.TabIndex = 11;
             this.button3.Text = "Add Grade";
             this.button3.UseVisualStyleBackColor = true;
@@ -52,9 +52,9 @@ namespace ClientTCP
             // 
             // btnGrade
             // 
-            this.btnGrade.Location = new System.Drawing.Point(137, 295);
+            this.btnGrade.Location = new System.Drawing.Point(665, 163);
             this.btnGrade.Name = "btnGrade";
-            this.btnGrade.Size = new System.Drawing.Size(116, 38);
+            this.btnGrade.Size = new System.Drawing.Size(110, 38);
             this.btnGrade.TabIndex = 10;
             this.btnGrade.Text = "List Students";
             this.btnGrade.UseVisualStyleBackColor = true;
@@ -93,11 +93,11 @@ namespace ClientTCP
             // table
             // 
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Location = new System.Drawing.Point(137, 35);
+            this.table.Location = new System.Drawing.Point(12, 12);
             this.table.Name = "table";
             this.table.ReadOnly = true;
             this.table.RowHeadersWidth = 51;
-            this.table.Size = new System.Drawing.Size(506, 254);
+            this.table.Size = new System.Drawing.Size(617, 341);
             this.table.TabIndex = 14;
             this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
@@ -107,7 +107,7 @@ namespace ClientTCP
             this.comboBox1.Location = new System.Drawing.Point(665, 64);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.Size = new System.Drawing.Size(110, 21);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
