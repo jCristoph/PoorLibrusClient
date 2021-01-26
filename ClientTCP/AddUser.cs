@@ -24,10 +24,15 @@ namespace ClientTCP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            write("ADDUSER "+txt1.Text + " " + txt2.Text + " " + txt3.Text + " " + txt4.Text + " " + txt5.Text + " " + txt6.Text);
-            MessageBox.Show("New user has been created");
+            if (txt1.TextLength > 0 && txt2.TextLength > 0 && txt3.TextLength > 0 && txt4.TextLength > 0 && txt5.TextLength > 0 && txt6.TextLength > 0)
+            {
+                write("ADDUSER " + txt1.Text + " " + txt2.Text + " " + txt3.Text + " " + txt4.Text + " " + txt5.Text + " " + txt6.Text);
+                MessageBox.Show("New user has been created");
+            }
+            else MessageBox.Show("Wrong data, try again");
             this.Hide();
         }
+       
         private void write(string toWrite)
         {
             byte[] buffer = ASCIIEncoding.UTF8.GetBytes(toWrite);
@@ -39,6 +44,11 @@ namespace ClientTCP
             {
 
             }
+        }
+
+        private void txt1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

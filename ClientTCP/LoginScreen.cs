@@ -108,5 +108,9 @@ namespace ClientTCP
             System.Windows.Forms.Application.ExitThread();
             System.Windows.Forms.Application.Exit();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

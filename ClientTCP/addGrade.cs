@@ -35,7 +35,8 @@ namespace ClientTCP
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            write("ADDGRADE " + textBox1.Text + " " + textBox2.Text);
+            if(textBox1.Text!= string.Empty || textBox2.Text!=string.Empty) write("ADDGRADE " + textBox1.Text + " " + textBox2.Text);
+
             this.Hide();
         }
 

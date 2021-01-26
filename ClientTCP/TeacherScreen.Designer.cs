@@ -29,6 +29,7 @@ namespace ClientTCP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherScreen));
             this.button3 = new System.Windows.Forms.Button();
             this.btnGrade = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,10 +42,9 @@ namespace ClientTCP
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(183, 412);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(137, 335);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 47);
+            this.button3.Size = new System.Drawing.Size(116, 38);
             this.button3.TabIndex = 11;
             this.button3.Text = "Add Grade";
             this.button3.UseVisualStyleBackColor = true;
@@ -52,10 +52,9 @@ namespace ClientTCP
             // 
             // btnGrade
             // 
-            this.btnGrade.Location = new System.Drawing.Point(183, 363);
-            this.btnGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrade.Location = new System.Drawing.Point(137, 295);
             this.btnGrade.Name = "btnGrade";
-            this.btnGrade.Size = new System.Drawing.Size(155, 47);
+            this.btnGrade.Size = new System.Drawing.Size(116, 38);
             this.btnGrade.TabIndex = 10;
             this.btnGrade.Text = "List Students";
             this.btnGrade.UseVisualStyleBackColor = true;
@@ -63,10 +62,9 @@ namespace ClientTCP
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(712, 474);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(534, 385);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 55);
+            this.button2.Size = new System.Drawing.Size(125, 45);
             this.button2.TabIndex = 9;
             this.button2.Text = "Logout";
             this.button2.UseVisualStyleBackColor = true;
@@ -74,10 +72,9 @@ namespace ClientTCP
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(537, 474);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(403, 385);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 55);
+            this.button1.Size = new System.Drawing.Size(125, 45);
             this.button1.TabIndex = 8;
             this.button1.Text = "Change Password";
             this.button1.UseVisualStyleBackColor = true;
@@ -85,10 +82,9 @@ namespace ClientTCP
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(887, 474);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit.Location = new System.Drawing.Point(665, 385);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(167, 55);
+            this.Exit.Size = new System.Drawing.Size(125, 45);
             this.Exit.TabIndex = 13;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = true;
@@ -97,28 +93,29 @@ namespace ClientTCP
             // table
             // 
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Location = new System.Drawing.Point(183, 43);
-            this.table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.table.Location = new System.Drawing.Point(137, 35);
             this.table.Name = "table";
+            this.table.ReadOnly = true;
             this.table.RowHeadersWidth = 51;
-            this.table.Size = new System.Drawing.Size(675, 313);
+            this.table.Size = new System.Drawing.Size(506, 254);
             this.table.TabIndex = 14;
             this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(887, 79);
+            this.comboBox1.Location = new System.Drawing.Point(665, 64);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // TeacherScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.table);
             this.Controls.Add(this.Exit);
@@ -126,7 +123,7 @@ namespace ClientTCP
             this.Controls.Add(this.btnGrade);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TeacherScreen";
             this.Text = "Teacher Client";
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();

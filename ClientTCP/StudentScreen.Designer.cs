@@ -32,6 +32,7 @@ namespace ClientTCP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentScreen));
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_chngPsswd = new System.Windows.Forms.Button();
             this.btn_refresh = new System.Windows.Forms.Button();
@@ -101,6 +102,7 @@ namespace ClientTCP
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_chngPsswd);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudentScreen";
             this.Text = "Student Client";
             this.Load += new System.EventHandler(this.StudentScreen_Load);

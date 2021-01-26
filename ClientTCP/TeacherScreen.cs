@@ -93,7 +93,7 @@ namespace ClientTCP
             write("STUDENTLIST");
             string[] command = checkMessage(read());
             table.ColumnCount = 21;
-            table.Columns[0].Name = "ID";
+            table.Columns[0].Name = "Index";
             table.Columns[1].Name = "Name";
             table.Columns[2].Name = "Second Name";
             table.Columns[3].Name = "Subject";

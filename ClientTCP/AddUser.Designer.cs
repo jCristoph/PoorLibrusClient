@@ -29,6 +29,7 @@ namespace ClientTCP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser));
             this.txt5 = new System.Windows.Forms.TextBox();
             this.txt4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -140,6 +141,7 @@ namespace ClientTCP
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(124, 20);
             this.txt1.TabIndex = 25;
+            this.txt1.TextChanged += new System.EventHandler(this.txt1_TextChanged);
             // 
             // label6
             // 
@@ -168,6 +170,7 @@ namespace ClientTCP
             this.Controls.Add(this.txt2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddUser";
             this.Text = " ";
             this.ResumeLayout(false);
